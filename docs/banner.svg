@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320" role="img" aria-label="Digital — Branding, Digital Marketing and Business Solutions">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ff512f"/>
+      <stop offset="1" stop-color="#dd2476"/>
+    </linearGradient>
+    <linearGradient id="indigo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8e2de2"/>
+      <stop offset="1" stop-color="#4a00e0"/>
+    </linearGradient>
+    <clipPath id="frame"><rect width="1200" height="320" rx="24"/></clipPath>
+    <style>
+      .t { font-family: Poppins, "Segoe UI", Helvetica, Arial, sans-serif; }
+      .title { font-size: 72px; font-weight: 700; fill: #1a3260; letter-spacing: -1px;
+               opacity: 0; animation: drop .9s cubic-bezier(.2,.8,.2,1) .2s forwards; }
+      .sub   { font-size: 26px; fill: #808291;
+               opacity: 0; animation: drop .9s cubic-bezier(.2,.8,.2,1) .5s forwards; }
+      .pill  { opacity: 0; animation: drop .8s cubic-bezier(.2,.8,.2,1) 0s forwards; }
+      .word  { font-size: 26px; font-weight: 600; fill: url(#g); opacity: 0;
+               animation: cycle 9s infinite; }
+      .w2 { animation-delay: 3s; } .w3 { animation-delay: 6s; }
+      .blob  { transform-box: fill-box; transform-origin: center; animation: float 7s ease-in-out infinite; }
+      .b2 { animation-duration: 9s; animation-direction: reverse; }
+      .b3 { animation-duration: 11s; }
+      .ring  { transform-box: fill-box; transform-origin: center; animation: spin 24s linear infinite; }
+      .wave  { animation: slide 10s linear infinite; }
+      .wave2 { animation: slide 16s linear infinite reverse; }
+      @keyframes drop  { from { opacity: 0; transform: translateY(-24px); } to { opacity: 1; transform: none; } }
+      @keyframes cycle { 0%,2% { opacity: 0; transform: translateY(12px); }
+                         6%,30% { opacity: 1; transform: none; }
+                         34%,100% { opacity: 0; transform: translateY(-12px); } }
+      @keyframes float { 0%,100% { transform: translate(0,0) scale(1); } 50% { transform: translate(-18px,14px) scale(1.06); } }
+      @keyframes spin  { to { transform: rotate(360deg); } }
+      @keyframes slide { from { transform: translateX(0); } to { transform: translateX(-1200px); } }
+      @media (prefers-reduced-motion: reduce) {
+        * { animation: none !important; opacity: 1 !important; }
+        .w2, .w3 { opacity: 0 !important; }
+      }
+    </style>
+  </defs>
+
+  <g clip-path="url(#frame)">
+    <rect width="1200" height="320" fill="#fff7f3"/>
+
+    <!-- floating shapes -->
+    <circle class="blob"    cx="1020" cy="120" r="150" fill="url(#g)" opacity=".9"/>
+    <circle class="blob b2" cx="900"  cy="250" r="70"  fill="url(#indigo)" opacity=".85"/>
+    <circle class="blob b3" cx="1140" cy="280" r="40"  fill="#ff4d6d" opacity=".5"/>
+    <circle class="ring" cx="1020" cy="120" r="185" fill="none" stroke="#1a3260" stroke-opacity=".15" stroke-width="2" stroke-dasharray="6 14"/>
+
+    <!-- waves -->
+    <g class="wave2" opacity=".35">
+      <path d="M0 290 Q150 260 300 290 T600 290 T900 290 T1200 290 T1500 290 T1800 290 T2100 290 T2400 290 V320 H0Z" fill="#dd2476"/>
+    </g>
+    <g class="wave" opacity=".55">
+      <path d="M0 300 Q150 280 300 300 T600 300 T900 300 T1200 300 T1500 300 T1800 300 T2100 300 T2400 300 V320 H0Z" fill="#ff512f"/>
+    </g>
+
+    <!-- copy -->
+    <g class="pill">
+      <rect x="64" y="48" width="210" height="40" rx="20" fill="#ffffff"/>
+      <text class="t" x="169" y="74" font-size="17" fill="#ff4d6d" text-anchor="middle">Digital Experience</text>
+    </g>
+    <text class="t title" x="60" y="160">Digital</text>
+    <text class="t sub" x="64" y="208">Next.js marketing site for</text>
+    <text class="t word"    x="64" y="248">Branding &amp; Strategy</text>
+    <text class="t word w2" x="64" y="248">Digital Marketing &amp; SEO</text>
+    <text class="t word w3" x="64" y="248">Business Solutions</text>
+  </g>
+</svg>
