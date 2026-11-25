@@ -1,0 +1,87 @@
+/*
+ * Tailwind is imported WITHOUT Preflight on purpose: the original design relies
+ * on browser default styles (bold headings at UA sizes, 13.33px button text,
+ * inline images, ...). Only the original minimal reset is re-applied below.
+ */
+@layer theme, base, components, utilities;
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities);
+
+@theme inline {
+  /* fonts */
+  --font-poppins: var(--font-poppins-next);
+
+  /* text colors */
+  --color-gray: #808291;
+  --color-offwhite: #f8f9fa;
+  --color-light: #cdc6c6;
+  --color-dark: #1a3260;
+  --color-dark2: #1a3760d4;
+  --color-red: #ff4d6d;
+
+  /* soft section backgrounds */
+  --color-soft-blue: rgb(249, 243, 255);
+  --color-soft-red: rgb(254, 247, 252);
+  --color-soft-yellow: rgb(255, 255, 246);
+  --color-soft-purple: rgb(246, 255, 255);
+  --color-peach: #fff7f3;
+
+  /* font sizes (em based, like the original) */
+  --text-body: 1em;
+  --text-body--line-height: 1.5em;
+  --text-md: 1.5em;
+  --text-heading: 2.2em;
+  --text-heading--line-height: 3rem;
+  --text-display: 3em;
+  --text-icon: 5em;
+
+  /* shadow */
+  --shadow-soft: 0px 0px 50px 0px rgb(0 0 0 / 10%);
+}
+
+@layer base {
+  * > * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  ul {
+    list-style: none;
+  }
+}
+
+/* gradients */
+@utility bg-gradient {
+  background: linear-gradient(to right, #ff512f, #dd2476);
+}
+
+@utility bg-gradient-indigo {
+  background: linear-gradient(to right, #8e2de2, #4a00e0);
+}
+
+@utility bg-gradient-peach {
+  background: linear-gradient(to right, #fff7f3, #fff7f3);
+}
+
+/* same breakpoints as the original .container (stops at 1280px) */
+@utility site-container {
+  width: 100%;
+
+  @media (width >= 40rem) {
+    max-width: 640px;
+  }
+  @media (width >= 48rem) {
+    max-width: 768px;
+  }
+  @media (width >= 64rem) {
+    max-width: 1024px;
+  }
+  @media (width >= 80rem) {
+    max-width: 1280px;
+  }
+}
