@@ -107,12 +107,6 @@ The page leads visitors from a bold hero, through the agency's services, stats a
   </tr>
 </table>
 
-### Mobile
-
-<p align="center">
-  <img src="docs/screenshots/mobile.png" alt="Mobile view of the hero" width="300" />
-</p>
-
 <details>
 <summary><b>🖼️ Full-page screenshot</b> (click to expand)</summary>
 <br/>
@@ -277,23 +271,6 @@ The page is fully static, so it can be deployed anywhere Next.js runs:
 
 - **[Vercel](https://vercel.com/new):** import the repository; no configuration is needed.
 - **Any Node host:** `npm run build && npm run start`.
-
----
-
-## 🐞 Known issues
-
-- **The mobile menu opens but its links are hidden.** On small screens the header box is a fixed `70px` tall with `overflow-y: hidden`, so the expanded link list is clipped. Letting the header grow when the menu is open (for example `h-auto` instead of `h-[70px]` below `lg`) would fix it.
-
----
-
-## 🗺 Roadmap ideas
-
-- [ ] Fix the mobile navigation clipping
-- [ ] Replace placeholder copy and add real portfolio links
-- [ ] Wire up the newsletter form
-- [ ] Trigger entrance animations on scroll (Intersection Observer) instead of on load
-- [ ] Add `alt` text to all images and run an accessibility audit
-- [ ] Add a `LICENSE` file
 
 ---
 
